@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+
+              android:orientation="vertical"
+              tools:ignore="RtlHardcoded">
+
+    <ScrollView
+        android:id="@+id/activity_sign_up_scroll_view_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+
+            android:paddingLeft="@dimen/minor_screen_margin"
+            android:paddingRight="@dimen/minor_screen_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/minor_screen_margin"
+                android:gravity="center"
+                android:padding="@dimen/minor_screen_margin"
+
+                android:text="@string/let_s_set_up_your_account"/>
+
+            <EditText
+                android:id="@+id/activity_sign_up__edit_email"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="@dimen/minor_screen_margin"
+                android:layout_marginLeft="@dimen/minor_screen_margin"
+                android:layout_marginRight="@dimen/minor_screen_margin"
+                android:layout_marginTop="@dimen/modest_screen_margin"
+
+                android:hint="@string/e_mail"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:id="@+id/activity_sign_up__edit_password"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="@dimen/tiny_screen_margin"
+                android:layout_marginLeft="@dimen/minor_screen_margin"
+                android:layout_marginRight="@dimen/minor_screen_margin"
+                android:layout_marginTop="@dimen/minor_screen_margin"
+
+                android:hint="@string/password"
+                android:inputType="textPassword"/>
+
+            <EditText
+                android:id="@+id/activity_sign_up__edit_password_confirm"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="@dimen/minor_screen_margin"
+                android:layout_marginLeft="@dimen/minor_screen_margin"
+                android:layout_marginRight="@dimen/minor_screen_margin"
+                android:layout_marginTop="@dimen/tiny_screen_margin"
+
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"/>
+
+            <TextView
+                android:id="@+id/activity_sign_up_text_view_password_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="@dimen/minor_screen_margin"
+                android:gravity="center"
+
+                android:minLines="3"
+                android:text="@string/your_password_must_be"/>
+
+            <!-- not replace with Lowercase, see initClickableView -->
+            <TextView
+                android:id="@+id/activity_sign_up__text_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/minor_screen_margin"
+                android:text="@string/sign_up_privacy_policy_template"/>
+
+            <LinearLayout
+                android:id="@+id/activity_sign_up__layout_sign_up_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/activity_sign_up__spinner_prefix"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="@dimen/minor_screen_margin"
+                    android:hint="@string/title"/>
+
+                <EditText
+                    android:id="@+id/activity_sign_up__edit_first_name"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="@dimen/minor_screen_margin"
+                    android:layout_marginLeft="@dimen/minor_screen_margin"
+                    android:layout_marginRight="@dimen/minor_screen_margin"
+                    android:layout_marginTop="@dimen/modest_screen_margin"
+
+                    android:hint="@string/first_name"/>
+
+                <EditText
+                    android:id="@+id/activity_sign_up__edit_surname"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="@dimen/minor_screen_margin"
+                    android:layout_marginLeft="@dimen/minor_screen_margin"
+                    android:layout_marginRight="@dimen/minor_screen_margin"
+                    android:layout_marginTop="@dimen/modest_screen_margin"
+
+                    android:hint="@string/surname"/>
+
+                <Spinner
+                    android:id="@+id/activity_sign_up__spinner_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="@dimen/minor_screen_margin"
+                    android:layout_marginLeft="@dimen/minor_screen_margin"
+                    android:layout_marginRight="@dimen/minor_screen_margin"
+                    android:layout_marginTop="@dimen/modest_screen_margin"
+
+                    android:hint="@string/gender"/>
+
+                <EditText
+                    android:id="@+id/activity_sign_up__edit_mobile_number"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="@dimen/minor_screen_margin"
+                    android:layout_marginLeft="@dimen/minor_screen_margin"
+                    android:layout_marginRight="@dimen/minor_screen_margin"
+                    android:layout_marginTop="@dimen/minor_screen_margin"
+
+                    android:hint="@string/mobile_number"
+                    android:inputType="phone"/>
+
+                <Spinner
+                    android:id="@+id/activity_sign_up__spinner_receive_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="@dimen/minor_screen_margin"
+                    android:layout_marginLeft="@dimen/minor_screen_margin"
+                    android:layout_marginRight="@dimen/minor_screen_margin"
+                    android:layout_marginTop="@dimen/modest_screen_margin"/>
+            </LinearLayout>
+
+            <!-- stretching frame layout, using layout_weight -->
+            <include layout="@layout/include_stretching"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/minor_screen_margin"
+
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/activity_sign_up__btn_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/minor_screen_margin"
+
+                    android:text="@string/btn_confirm"/>
+
+                <Button
+                    android:id="@+id/activity_sign_up__btn_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/minor_screen_margin"
+
+                    android:text="@string/btn_register"/>
+
+                <Button
+                    android:id="@+id/activity_sign_up__btn_goto_sign_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/minor_screen_margin"
+
+                    android:text="@string/i_already_have_an_account"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

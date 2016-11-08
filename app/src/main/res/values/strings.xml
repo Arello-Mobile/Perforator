@@ -1,0 +1,343 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Meta -->
+	<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+		AIzaSyBs1DAaGuy8u2QnJGt6BfCqrBgJZuumyfw
+	</string>
+	<string name="facebook_app_id">
+		1829187010684574
+	</string>
+
+    <string name="app_name">Validator</string>
+
+    <!-- Screen titles-->
+    <string name="register">register</string>
+    <string name="restaurant_details">restaurant details</string>
+    <string name="collection_details">collection details</string>
+    <string name="your_basket">your basket</string>
+    <string name="your_order">your order</string>
+    <string name="payment">payment</string>
+    <string name="payment_complete">payment complete</string>
+
+    <!-- Messages -->
+    <string name="thank_you">thank you!</string>
+    <string name="your_account_is_almost_set_up">your account is almost set up</string>
+    <string name="profile_percent_completed">profile is %s%% complete</string>
+
+    <!-- Errors -->
+    <string name="error_undefined_server_exception">server error</string>
+    <string name="error_internet_connection">the internet connection appears to be offline</string>
+    <string name="error_database_error">database error. try to reinstall application</string>
+    <string name="error_unknown_network_exception">unknown network exception</string>
+    <string name="error_customer_empty_restart_app">customer information not available on device. please, restart app and try again</string>
+    <string name="error_timeout">request timed out</string>
+    <string name="no_result">no results</string>
+    <string name="error_you_cant_order_in_this_site">you can\'t order in this store now.\nplease try another one.</string>
+
+    <!-- Buttons -->
+    <string name="ok" tools:ignore="ButtonCase,Typos">ok</string>
+    <string name="btn_confirm">confirm</string>
+    <string name="btn_register">next</string>
+    <string name="i_already_have_an_account">i already have an account</string>
+
+    <!-- Hint -->
+    <string name="hint_date_of_birth">date of birth</string>
+    <string name="hint_choose_address">choose address</string>
+    <string name="hint_building_name">street number / unit / building name</string>
+    <string name="hint_street_name">street name</string>
+    <string name="hint_suburb">suburb</string>
+
+    <!-- Sign in -->
+    <string name="sign_in">sign in</string>
+    <string name="sign_in_login_hint">e-mail</string>
+    <string name="sign_in_password_hint">password</string>
+    <string name="sign_in_login_error">incorrect login</string>
+    <string name="sign_in_password_error">incorrect email</string>
+    <string name="sign_in_tittle">welcome to wagamama</string>
+    <string name="forgot_your_password">forgot your password?</string>
+
+    <!-- Sign up-->
+    <string name="let_s_set_up_your_account">let\'s set up your account</string>
+    <string name="by_registering_you_agree_to_our">by registering you agree to our</string>
+    <string name="your_password_must_be">your password must be between 8 and 16 characters and must contain at least one number and one capital letter</string>
+    <string name="terms_and_conditions">terms and conditions</string>
+    <string name="sign_up_privacy_policy_template" formatted="false">by registering you agree you agree to our\n%s, %s,\n%s and to receive marketing communications from wagamama</string>
+    <string name="please_fill_in_your_details">please fill in your details\nfor the latest news and offers</string>
+    <string name="your_details">your details</string>
+    <string name="choose_address">choose address</string>
+
+    <!-- Menu sections-->
+    <string name="menu_section_home">home</string>
+    <string name="menu_section_our_food">our food</string>
+    <string name="menu_section_find_restaurant">find a restaurant</string>
+    <string name="menu_section_order_take_out">order take-out</string>
+    <string name="menu_section_eat_in_wagamama">eat in at wagamama</string>
+    <string name="menu_section_my_rewards">my rewards</string>
+    <string name="menu_section_profile">your details</string>
+    <string name="menu_section_recents">recent orders</string>
+    <string name="menu_section_settings">faq\'s</string>
+
+    <!-- Recovery password -->
+    <string name="forgotten_password">forgotten password</string>
+    <string name="please_enter_the_e_mail">please enter the e-mail address you used to register</string>
+    <string name="an_email_has_been_sent">an email has been sent to you with your instructions to reset your password</string>
+
+    <!-- Find a wagamama -->
+    <string name="enter_postcode_or_town">enter postcode or town</string>
+    <string name="find_a_wagamama">find a wagamama</string>
+    <string name="miles_away">miles away</string>
+    <string name="more_details">more details</string>
+    <string name="opening_times_template" formatted="false">%s %s - %s</string>
+    <string name="select_location">select location</string>
+    <string name="change_location">change location</string>
+    <string name="selected">selected</string>
+
+    <!-- Home -->
+    <string name="home_pay_at_table_earn_loyalty_stars">pay at table + earn\nloyalty stars</string>
+    <string name="home_host_or_join_a_table_and_pay_with_qkr">host or join a table and pay with qkr! to earn stars to play for food and drink</string>
+    <string name="home_host_a_table">host a table</string>
+    <string name="home_join_a_table">join a table</string>
+    <string name="from_bowl_to_soul">from bowl to soul</string>
+    <string name="staying_in_order_take_out">staying in?\norder take-out</string>
+
+    <!-- Our food and take-out -->
+    <string name="fragment_our_food_product_tap_and_collect">tap and collect</string>
+    <string name="fragment_our_food_product_product_not_available_change_location">change location</string>
+    <string name="fragment_our_food_product_select_store">select</string>
+    <string name="item_menu_section_text_view_title">fresh, lively food\n(with soul)</string>
+
+    <!-- Validate account -->
+    <string name="validate_account_dialog_title">validateType account</string>
+    <string name="validate_account_dialog_first_text">thanks for registering, now validateType your registration by entering the pin that has been sent to your email, here</string>
+
+    <!-- Basket -->
+    <string name="price_mask">%1$.2f</string>
+    <string name="price_mask_int">%1$s</string>
+    <string name="add_to_basket">add to basket</string>
+    <string name="view_basket">view basket</string>
+    <string name="view_order">view order</string>
+    <string name="when_would_you_like_to_collect_your_order">when would you like to collect your order?</string>
+    <string name="can_we_tempt_you">can we tempt you?</string>
+    <string name="out_of_stock">out of stock</string>
+    <string name="error_template_we_dont_have_this_products">we don\'t have any %s in stock right now so we can\'t add this to your order</string>
+    <string name="pay_now">pay now</string>
+    <string name="template_order_preview_total_error" formatted="false">%s order value is: %s</string>
+
+    <!-- Payment -->
+    <string name="do_you_want_exit">do you really want to quit?</string>
+
+    <!-- Commons -->
+    <string name="faq_url">http://www.wagamama.com/stars/faqs</string>
+    <string name="privacy_policy_url">http://www.wagamama.com/privacy-policy</string>
+    <string name="terms_and_conditions_url">http://www.wagamama.com/terms-and-conditions</string>
+    <string name="official_rules_url">http://www.wagamama.com/official-rules</string>
+
+    <string name="coming_soon">coming soon…</string>
+    <string name="postcode">postcode</string>
+    <string name="find_address">find address</string>
+    <string name="please_wait">please wait…</string>
+    <string name="save">save</string>
+    <string name="error">error</string>
+    <string name="sorry">sorry</string>
+    <string name="password">password</string>
+    <string name="e_mail">e-mail</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="title">title</string>
+    <string name="first_name">first name</string>
+    <string name="surname">surname</string>
+    <string name="gender">gender</string>
+    <string name="mobile_number">mobile number</string>
+    <string name="send">send</string>
+    <string name="list">list</string>
+    <string name="map">map</string>
+    <string name="cancel" tools:ignore="ButtonCase">cancel</string>
+    <string name="phone_template">phone: %s</string>
+    <string name="opening_time">opening times</string>
+    <string name="facilities">facilities</string>
+    <string name="item_category_product_list_our_favorite">our favourite</string>
+    <string name="we_need_permission">we need permission</string>
+    <string name="description_location_permission">description location permission</string>
+    <string name="please_select_restaurant">please select a restaurant</string>
+    <string name="total">total</string>
+    <string name="place_order">place order</string>
+    <string name="welcome">welcome</string>
+    <string name="btn_continue">continue</string>
+    <string name="please_confirm_your_details">please confirm your details in case we need to contact you about your order</string>
+    <string name="maximum">maximum</string>
+    <string name="minimum">minimum</string>
+    <string name="your_total">your total</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="please_try_again">please try again</string>
+    <string name="fail_payment">sorry the transaction has not been processed as the payment has failed to complete.</string>
+    <string name="take_out_payment_confirmation_thanks">thank you for your payment\nyou can see the order in %s and the receipt has been emailed to you</string>
+    <string name="pat_hoster_payment_confirmation_thanks">payment success! thank you for hosting. you receipt has been emailed to you. you can view the order in %s and any stars you have earned in my rewards</string>
+    <string name="pat_joiner_payment_confirmation_thanks">payment success! you receipt has been emailed to you. you can view the order in %s and any stars you have earned in my rewards</string>
+    <string name="payment_confirmation_you_order_is_ready">your order will be ready for collection</string>
+    <string name="at">at</string>
+    <string name="view_receipt">view receipt</string>
+    <string name="profile_profile">profile</string>
+    <string name="profile_edit">edit</string>
+    <string name="profile_name">name</string>
+    <string name="hint_add_your_date_of_birth">add your date of birth</string>
+    <string name="address">address</string>
+    <string name="hint_add_your_address">add your address details</string>
+    <string name="e_mail_address">e-mail address</string>
+    <string name="e_mail_preferences">e-mail preferences</string>
+    <string name="default_tip">default tip</string>
+    <string name="logout">log out</string>
+    <string name="edit_profile">edit profile</string>
+    <string name="password_hint">********</string>
+    <string name="email_preferences_false">not receive e-mail notifications</string>
+    <string name="email_preferences">receive e-mail notifications</string>
+    <string name="edit_address">edit address</string>
+    <string name="edit_email">e-mail preferences</string>
+    <string name="new_password">new password</string>
+    <string name="confirm_new_password">confirm new password</string>
+    <string name="edit_password">edit password</string>
+    <string name="tip_enter_count_hint"> enter amount</string>
+    <string name="edit_default_tip">edit default tip</string>
+    <string name="current_password">current password</string>
+    <string name="do_you_want_sign_out">do you really want to log out?</string>
+    <string name="template_version">version %s</string>
+    <string name="vat_reg">vat reg gb 681 4475 17</string>
+    <string name="print">print</string>
+    <string name="printing_is_not_available">printing is not available on your version of Android</string>
+    <string name="share_image_chooser_title">share receipt…</string>
+    <string name="receive_pin_by">receive pin by</string>
+    <string name="text_message">text message</string>
+    <string name="title_validate_account">validateType account</string>
+    <string name="validate_account">your account has not yet been validated, %s to enter or request a pin</string>
+    <string name="validate_account_tap_here">please tap here</string>
+    <string name="pin">pin</string>
+    <string name="validate_account_info">we\'ve sent you your pin. enter it here for validation\nif you have not received it, then %s, it will be re-sent to you</string>
+    <string name="validate_account_info_tap_here">tap here</string>
+    <string name="validateType">validateType</string>
+    <string name="server_registered_not_validated">The customer is registered, but not validated.</string>
+    <string name="service_failure">The customer is not registered in loyalty.</string>
+    <string name="your_account_success_validate">your account has been successfully validated</string>
+    <string name="msg_error_account_validate_emails_not_match">you need to be logged in to validateType account</string>
+    <string name="msg_error_account_validate_not_logged">you need to be logged in to other account</string>
+    <string name="repeat_order">repeat order</string>
+    <string name="no_recent">no recents</string>
+    <string name="recent_orders">recent orders</string>
+    <string name="add_order_to_favourites_title">add order to favourites</string>
+    <string name="add_order_to_favourites_message">please enter a name for your order</string>
+    <string name="submit">submit</string>
+    <string name="no_favourites">no favourites</string>
+    <string name="my_receipt">my receipt</string>
+    <string name="redeem_rewards">redeem rewards</string>
+    <string name="redeem_your_rewards">redeem your rewards?</string>
+    <string name="select_below_to_redeem_your_rewards">select below to redeem your rewards</string>
+    <string name="we_dont_have_redeem">we don’t have any items to redeem your rewards against right now. please select another item</string>
+    <string name="you_have_stars" formatted="false"><![CDATA[you have <font color="#e51c12">%s</font>]]></string>
+    <string name="you_have_stars_and_free" formatted="false"><![CDATA[you have <font color="#e51c12">%s</font><br />and a <font color="#e51c12">%2$s</font>]]></string>
+    <string name="free">free</string>
+    <string name="my_stars">my stars</string>
+    <string name="view_options">view options</string>
+    <string name="view_rewards">view rewards</string>
+    <string name="add_bonus_stars">add bonus stars</string>
+    <string name="enter">enter</string>
+    <string name="my_rewards_title_template">you have %s</string>
+    <string name="wizard_start_now">let\'s get started</string>
+    <string name="wizard_page_1_title">free juice upgrade</string>
+    <string name="wizard_page_2_title">loyalty</string>
+    <string name="wizard_page_3_title">swap or save</string>
+    <string name="wizard_page_4_title">order take-out</string>
+    <string name="wizard_page_5_title">pay at table</string>
+    <string name="wizard_page_6_title">register now</string>
+
+    <string name="wizard_page_1_headline">as a member get a large juice\nfor the price of a regular every\ntime you eat in and pay\nthrough the app</string>
+    <string name="wizard_page_2_headline">earn loyalty stars every time\nyou pay for your meal through\nthe app</string>
+    <string name="wizard_page_3_headline">choose to save your loyalty stars\ntowards rewards</string>
+    <string name="wizard_page_5_headline">eat when you\'re hungry,\npay when you\'re ready</string>
+    <string name="wizard_page_6_headline">register now and pay through\nthe app to get your free juice\nupgrade today and start\nearning loyalty stars</string>
+
+    <string name="wizard_page_1_description">pay at table powered by</string>
+    <string name="wizard_page_uk_2_description">for every £10 you spend you will receive 1 star\n\n5 stars = a free drink\n10 stars = a free side\n20 stars = a free main</string>
+    <string name="wizard_page_us_2_description">for every $15 you spend you will receive 1 star\n\n5 stars = a free drink\n10 stars = a free side\n20 stars = a free main</string>
+    <string name="wizard_page_3_description">or swap your stars to try and win food drink or a mystery prize!</string>
+    <string name="wizard_page_4_description">save your orders for quick +\neasy re-ordering</string>
+    <string name="wizard_page_5_description">we\'ve teamed up with\nmastercard™ so you can use\nqkr! to pay at table quickly\nand securely</string>
+    <string name="menu_section_take_tour">take a tour</string>
+    <string name="slide_star_template">slide the star to\ntry and %s</string>
+    <string name="win">win</string>
+    <string name="play_fail_text">you have won one entry into our monthly prize draw to win %s100 wagamama gift card. winners will drawn at random and will be notified by the end of the following month.\ngood luck!</string>
+    <string name="congratulations">congratulations!</string>
+    <string name="your_prize">your prize</string>
+    <string name="rewards_id_a">Free edamame</string>
+    <string name="rewards_id_b">Free juice</string>
+    <string name="rewards_id_c">Free main course</string>
+    <string name="rewards_id_d">Sides</string>
+    <string name="valid_from">valid from %s</string>
+    <string name="expires">expires %s</string>
+    <string name="drink">drink</string>
+    <string name="my_rewards_options">my stars</string>
+    <string name="how_can_i_spend_my_stars">how can i spend my stars</string>
+    <string name="side">side</string>
+    <string name="main_dish">main dish</string>
+    <string name="swap">swap</string>
+    <string name="swap_or_save">swap or save?</string>
+    <string name="earned_stars"><![CDATA[you have earned <font color="#e51c12">%s</font><br />on this visit to wagamama]]></string>
+    <string name="enter_bonus_code">enter bonus code</string>
+    <string name="swap_or_save_content">save your loyalty stars towards rewards or swap them to try and win food drink or a mystery prize</string>
+    <string name="you_have_pocketed_your_stars">you have saved your stars</string>
+    <string name="these_will_be_added">these will be added to your balance within 30 mins</string>
+    <string name="template_you_have_earned">you have earned %s</string>
+    <string name="view_my_rewards">view my rewards</string>
+    <string name="no_rewards">no rewards yet.\nswap your stars after your next transaction to try and win a reward</string>
+    <string name="retry">retry</string>
+    <string name="hint_state">state</string>
+    <string name="hint_city">city</string>
+    <string name="loyalty_transactions_button">loyalty transaction history</string>
+    <string name="loyalty_transactions">loyalty transaction history</string>
+    <string name="no_loyalty_transactions">no loyalty transactions</string>
+    <string name="yes_im_here">yes, i\'m here</string>
+    <string name="check_in_at_waga">check in at wagamama</string>
+    <string name="you_are_checked_in_your_code_is">you are checked in! your code is</string>
+    <string name="checked_in_text_description_host">give this code to your server when placing your initial order and also to your friends so you can split the bill, pay at table and earn stars</string>
+    <string name="checked_in_text_description_guest">eat when you\'re hungry, pay when you\'re ready\nshow your table code to your server and see items appear on your bill in real time\n\ndon\'t forget to give your code to your friends at your table so they can pay and earn stars too</string>
+    <string name="leave_table">leave the table</string>
+    <string name="friends_at_your_table">friends at your table</string>
+    <string name="you">you</string>
+    <string name="easy_ordering">easy ordering</string>
+    <string name="ask_table_code">ask your host for the code\nto join your friends</string>
+    <string name="enter_table_code">enter table code</string>
+    <string name="join">join</string>
+    <string name="your_table_code_format">your table code is %s</string>
+    <string name="request_push_title">Push notifications</string>
+    <string name="request_push_message">\"wagamama\" would like to send you push notifications</string>
+    <string name="deny">deny</string>
+    <string name="allow">allow</string>
+    <string name="you_table_closed_inactivity">your order in wagamama is closed due to inactivity.\nthanks for your visit.</string>
+    <string name="you_table_closed_success">your order in wagamama is closed.\nthanks for your visit.</string>
+    <string name="the_total_bill_for_your_table_is">the total bill\nfor your table is</string>
+    <string name="choose_the_items_you_want_to_pay">choose the items you want to pay for\nor select all to pay the full bill</string>
+    <string name="select_all">select all</string>
+    <string name="all_items">all items</string>
+    <string name="all_unclaimed_items">unclaimed</string>
+    <string name="my_claimed_items">my claimed items</string>
+    <string name="your_sub_total">your sub total</string>
+    <string name="label_tip_amount">tip</string>
+    <string name="template_tip_level">%s tip</string>
+    <string name="change">change</string>
+    <string name="restaurant_not_selected">restaurant not selected</string>
+    <string name="unselect_all">unselect all</string>
+    <string name="order_confirmation">order confirmation</string>
+    <string name="pay_pal">pay pal</string>
+    <string name="my_credit_card">my credit card</string>
+    <string name="qkr">Qkr!</string>
+    <string name="select_payment_method">please select payment method</string>
+    <string name="no_supported_payment_method">no supported payment method</string>
+    <string name="pay">pay</string>
+    <string name="choose_card">choose card</string>
+    <string name="how_would_you_like_to_pay">how would you like to pay?</string>
+    <string name="empty_string" />
+    <string name="official_rules">official rules</string>
+    <string name="privacy_policy">privacy policy</string>
+    <string name="zipcode">zipcode</string>
+    <string name="title_juice_update">juice up</string>
+    <string name="sorry_the_app_cannot_be_accessed">sorry the app cannot be accessed</string>
+    <string name="template_claimed_by">claimed by %s</string>
+    <string name="template_paid_by">paid by %s</string>
+    <string name="template_item_was_claimed_by">This item has been claimed by %s, do you want to remove the claim?</string>
+</resources>
