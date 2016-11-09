@@ -1,23 +1,18 @@
 package com.arellomobile.example;
 
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
 import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ScrollView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.arellomobile.validation.Field;
 import com.arellomobile.validation.Form;
-import com.arellomobile.validation.R;
 import com.arellomobile.validation.decorator.ComboDecorator;
 import com.arellomobile.validation.decorator.Decorator;
 import com.arellomobile.validation.decorator.TextColorDecorator;
@@ -26,32 +21,31 @@ import com.arellomobile.validation.model.DecoratorParams;
 import com.arellomobile.validation.model.ValidatorField;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SignUpActivity extends MvpAppCompatActivity implements SignUpView {
-	@Bind(R.id.activity_sign_up__edit_email)
+	@BindView(R.id.activity_sign_up__edit_email)
 	EditText mEmailEdit;
-	@Bind(R.id.activity_sign_up__edit_password)
+	@BindView(R.id.activity_sign_up__edit_password)
 	EditText mPasswordEdit;
-	@Bind(R.id.activity_sign_up__edit_password_confirm)
+	@BindView(R.id.activity_sign_up__edit_password_confirm)
 	EditText mPasswordConfirmEdit;
-	@Bind(R.id.activity_sign_up_text_view_password_error)
+	@BindView(R.id.activity_sign_up_text_view_password_error)
 	TextView mPasswordErrorText;
 
-	@Bind(R.id.activity_sign_up__edit_first_name)
+	@BindView(R.id.activity_sign_up__edit_first_name)
 	EditText mFirstNameEdit;
-	@Bind(R.id.activity_sign_up__edit_surname)
+	@BindView(R.id.activity_sign_up__edit_surname)
 	EditText mSurnameEdit;
-	@Bind(R.id.activity_sign_up__edit_mobile_number)
+	@BindView(R.id.activity_sign_up__edit_mobile_number)
 	EditText mMobileNumberEdit;
 
-	@Bind(R.id.activity_sign_up__btn_register)
+	@BindView(R.id.activity_sign_up__btn_register)
 	Button mRegisterButton;
-	@Bind(R.id.activity_sign_up__btn_confirm)
+	@BindView(R.id.activity_sign_up__btn_confirm)
 	Button mConfirmButton;
 
 	Map<Field, Decorator> mFieldViewTypes = new HashMap<>();

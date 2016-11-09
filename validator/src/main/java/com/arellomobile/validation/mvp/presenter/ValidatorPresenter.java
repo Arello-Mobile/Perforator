@@ -11,7 +11,6 @@ import com.arellomobile.validation.model.ValidatorResult;
 import com.arellomobile.validation.mvp.view.ValidatorView;
 import com.arellomobile.validation.validator.Validator;
 
-import java.util.Collection;
 import java.util.Map;
 
 /**
@@ -27,10 +26,7 @@ public abstract class ValidatorPresenter<T extends MvpView & ValidatorView> exte
 
 	protected boolean needDecorateView(ValidatorCondition validatorCondition, final Field field, boolean lastUpdate) {
 		mLastUpdate = lastUpdate && mLastUpdate;
-		if (validatorCondition == null) {
-			return true;
-		}
-		return validatorCondition.needDecorateField(field, mLastUpdate);
+		return validatorCondition == null || validatorCondition.needDecorateField(field, mLastUpdate);
 	}
 
 	public void setForm(Form form) {
@@ -56,11 +52,9 @@ public abstract class ValidatorPresenter<T extends MvpView & ValidatorView> exte
 
 	public void validate(ValidatorCondition validatorCondition) {
 		mLastUpdate = true;
-		Map<ValidatorField<?>, Collection<? extends Validator<?, ?>>> validatorFieldCollectionMap = mForm.provideValidators();
-		for (Map.Entry<ValidatorField<?>, Collection<? extends Validator<?, ?>>> entry : validatorFieldCollectionMap.entrySet()) {
-			for (Validator<?, ?> validator : entry.getValue()) {
-				updateValidateState(validatorCondition, entry.getKey(), validator.validate());
-			}
+		Map<ValidatorField<?>, Validator<?, ?>> validatorFieldCollectionMap = mForm.provideValidators();
+		for (Map.Entry<ValidatorField<?>, Validator<?, ?>> entry : validatorFieldCollectionMap.entrySet()) {
+			updateValidateState(validatorCondition, entry.getKey(), entry.getValue().validate());
 		}
 	}
 

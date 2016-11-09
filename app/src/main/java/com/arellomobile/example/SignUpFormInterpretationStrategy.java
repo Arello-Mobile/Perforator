@@ -27,6 +27,12 @@ public class SignUpFormInterpretationStrategy extends FormInterpretationStrategy
 			map.put(SignUpFields.PASSWORD, new DecoratorParams<Integer>());
 			map.put(SignUpFields.CONFIRM_PASSWORD, new DecoratorParams<Integer>());
 			return map;
+		} else if (result.getValidator().getTag().equals(SignUpForm.KEY_PASSWORD_EMPTY_VALIDATOR)) {
+			Map<Field, DecoratorParams<?>> map = new HashMap<>();
+			DecoratorParams<String> v = new DecoratorParams<>((String) result.getReason());
+			v.setTag(SignUpForm.KEY_PASSWORD_EMPTY_VALIDATOR);
+			map.put(SignUpFields.PASSWORD, v);
+			return map;
 		}
 		return null;
 	}

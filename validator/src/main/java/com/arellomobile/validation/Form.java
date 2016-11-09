@@ -4,7 +4,6 @@ import com.arellomobile.validation.model.ValidatorField;
 import com.arellomobile.validation.strategy.ResultInterpretationStrategy;
 import com.arellomobile.validation.validator.Validator;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -21,7 +20,7 @@ public abstract class Form implements Field {
 
 	private final ValidatorField<Form> mFormValidatorField = new ValidatorField<>(this);
 
-	public abstract LinkedHashMap<ValidatorField<?>, Collection<? extends Validator<?, ?>>> provideValidators();
+	public abstract LinkedHashMap<ValidatorField<?>, Validator<?, ?>> provideValidators();
 
 	public abstract ResultInterpretationStrategy provideStrategy(Field field, Validator<?, ?> validator);
 

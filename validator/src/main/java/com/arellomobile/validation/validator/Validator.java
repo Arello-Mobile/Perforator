@@ -11,7 +11,7 @@ import com.arellomobile.validation.model.ValidatorResult;
  */
 public abstract class Validator<Field, Reason> {
 	private ValidatorField<Field> mValidatorField;
-	private final ValidatorResult<Reason> mValidatorResult;
+	final ValidatorResult<Reason> mValidatorResult;
 	Reason mReason;
 	private String mTag;
 

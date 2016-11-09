@@ -4,7 +4,6 @@ import android.support.v4.content.ContextCompat;
 import android.widget.TextView;
 
 import com.arellomobile.validation.Field;
-import com.arellomobile.validation.R;
 import com.arellomobile.validation.decorator.FormDecorator;
 import com.arellomobile.validation.model.DecoratorParams;
 
@@ -25,7 +24,15 @@ public class SignUpFormDecoration extends FormDecorator {
 
 	@Override
 	protected void decorateField(final Field key, final DecoratorParams<?> value) {
-		updatePasswordsField(key, R.color.colorAccent);
+		if (key.equals(SignUpFields.PASSWORD)) {
+			if (value.getTag().equals(SignUpForm.KEY_PASSWORD_EMPTY_VALIDATOR)) {
+				mPassword.setError((CharSequence) value.getValue());
+			} else {
+				updatePasswordsField(key, R.color.colorAccent);
+			}
+		} else {
+			updatePasswordsField(key, R.color.colorAccent);
+		}
 	}
 
 	@Override

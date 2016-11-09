@@ -9,11 +9,11 @@ import com.arellomobile.validation.strategy.IntegerInterpretationStrategy;
 import com.arellomobile.validation.strategy.ResultInterpretationStrategy;
 import com.arellomobile.validation.strategy.StringInterpretationStrategy;
 import com.arellomobile.validation.validator.CompareValidator;
+import com.arellomobile.validation.validator.ComplexValidator;
 import com.arellomobile.validation.validator.EmptyValidator;
 import com.arellomobile.validation.validator.PatternValidator;
 import com.arellomobile.validation.validator.Validator;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 
@@ -26,6 +26,7 @@ import java.util.LinkedHashMap;
 public class SignUpForm extends Form {
 	private static final String TAG = "SignUpForm";
 	public static final String KEY_PASSWORD_CONFIRMATION = TAG + ".key_PASSWORD_CONFIRMATION";
+	public static final String KEY_PASSWORD_EMPTY_VALIDATOR = TAG + ".key_PASSWORD_EMPTY_VALIDATOR";
 
 	private ValidatorField<CharSequence> mEmail = new ValidatorField<>();
 	private ValidatorField<CharSequence> mPassword = new ValidatorField<>();
@@ -45,39 +46,46 @@ public class SignUpForm extends Form {
 	}
 
 	@Override
-	public LinkedHashMap<ValidatorField<?>, Collection<? extends Validator<?, ?>>> provideValidators() {
-		LinkedHashMap<ValidatorField<?>, Collection<? extends Validator<?, ?>>> map = new LinkedHashMap<>();
+	public LinkedHashMap<ValidatorField<?>, Validator<?, ?>> provideValidators() {
+		LinkedHashMap<ValidatorField<?>, Validator<?, ?>> map = new LinkedHashMap<>();
 		for (SignUpFields field : SignUpFields.values()) {
 			switch (field) {
 				case EMAIL:
-					map.put(getByField(field), Collections.singleton(new PatternValidator<>(mEmail, Patterns.EMAIL_ADDRESS, "Email not match!")));
+					map.put(getByField(field), new PatternValidator<>(mEmail, Patterns.EMAIL_ADDRESS, "Email not match!"));
 					break;
 				case PASSWORD:
-					map.put(getByField(field), Collections.singletonList(new PatternValidator<>(mPassword, "^" +
+					map.put(getByField(field), new PatternValidator<>(mPassword, "^" +
 							"(?=.*[0-9])" +
 							"(?=.*[A-Z])" +
 							"(?=.*[a-z])" +
 							"(?=\\S+$)" +
-							".{8,16}" +
-							"$", "Incorrect Password")));
+							".{0,16}" +
+							"$", "Incorrect Password"));
 					break;
 				case CONFIRM_PASSWORD:
 					break;
 				case NAME:
-					map.put(getByField(field), Collections.singleton(new EmptyValidator<>(mName, "Name is required!")));
+					map.put(getByField(field), new EmptyValidator<>(mName, "Name is required!"));
 					break;
 				case SURNAME:
-					map.put(getByField(field), Collections.singleton(new EmptyValidator<>(mSurname, "Surname is required!")));
+					map.put(getByField(field), new EmptyValidator<>(mSurname, "Surname is required!"));
 					break;
 				case PHONE:
-					map.put(getByField(field), Collections.singleton(new PatternValidator<>(mPhone, Patterns.PHONE, "Phone not match!")));
+					map.put(getByField(field), new PatternValidator<>(mPhone, Patterns.PHONE, "Phone not match!"));
 					break;
 			}
 		}
 
+		ComplexValidator<CharSequence> complexValidator = new ComplexValidator<>(mPassword);
+
+		EmptyValidator<String> validator = new EmptyValidator<>(mPassword, "Password is empty");
+		validator.setTag(KEY_PASSWORD_EMPTY_VALIDATOR);
+		complexValidator.add(validator);
+
 		CompareValidator<CharSequence, String> compareValidator = new CompareValidator<>(mPassword, Collections.singleton(mConfirmPassword), "Passwords not match");
 		compareValidator.setTag(KEY_PASSWORD_CONFIRMATION);
-		map.put(getFormValidatorField(), Collections.singleton(compareValidator));
+		complexValidator.add(compareValidator);
+		map.put(getFormValidatorField(), complexValidator);
 		return map;
 	}
 

@@ -11,7 +11,7 @@ import com.arellomobile.validation.validator.Validator;
 public class ValidatorResult<T> {
 	private boolean mValid;
 	private T reason;
-	private Validator<?, T> mValidator;
+	private Validator<?, ?> mValidator;
 
 	public boolean isValid() {
 		return mValid;
@@ -29,11 +29,11 @@ public class ValidatorResult<T> {
 		this.reason = reason;
 	}
 
-	public void setValidator(final Validator<?, T> validator) {
+	public void setValidator(final Validator<?, ?> validator) {
 		mValidator = validator;
 	}
 
-	public Validator<?, T> getValidator() {
+	public Validator<?, ?> getValidator() {
 		return mValidator;
 	}
 }
